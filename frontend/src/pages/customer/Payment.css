@@ -1,0 +1,35 @@
+.payment-form {
+  max-width: 500px;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(26, 58, 82, 0.08);
+}
+
+.payment-form .form-group {
+  margin-bottom: 20px;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.payment-form .StripeElement {
+  padding: 12px;
+  border: 2px solid var(--border-gray);
+  border-radius: 6px;
+  background-color: var(--white);
+}
+
+.payment-form .StripeElement--focus {
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.1);
+}
+
+.payment-form .btn-large {
+  width: 100%;
+  margin-top: 24px;
+}

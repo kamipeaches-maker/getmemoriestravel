@@ -1,0 +1,142 @@
+.admin-dashboard {
+  min-height: calc(100vh - 200px);
+  padding: 60px 0;
+  background-color: var(--off-white);
+}
+
+.admin-dashboard h1 {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.stat-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(26, 58, 82, 0.08);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: var(--light-blue);
+  flex-shrink: 0;
+}
+
+.stat-card h3 {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.users-section {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(26, 58, 82, 0.08);
+}
+
+.users-section h2 {
+  margin-bottom: 24px;
+  color: var(--dark-blue);
+}
+
+.user-type-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid var(--border-gray);
+  background-color: var(--white);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: var(--text-muted);
+}
+
+.filter-btn:hover {
+  border-color: var(--light-blue);
+}
+
+.filter-btn.active {
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+  color: var(--text-light);
+}
+
+.users-table {
+  overflow-x: auto;
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th {
+  background-color: var(--off-white);
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-gray);
+}
+
+.users-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status.active {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--success);
+}
+
+.status.inactive {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--error);
+}
+
+.users-table .btn {
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .users-table {
+    font-size: 0.9rem;
+  }
+
+  .users-table td,
+  .users-table th {
+    padding: 8px;
+  }
+}

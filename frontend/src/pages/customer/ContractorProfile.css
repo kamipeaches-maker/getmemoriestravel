@@ -1,0 +1,213 @@
+.contractor-profile-page {
+  min-height: calc(100vh - 200px);
+  padding-bottom: 60px;
+}
+
+.contractor-profile-header {
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-blue-light) 100%);
+  color: var(--text-light);
+  padding: 60px 0;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  font-size: 60px;
+}
+
+.profile-text h1 {
+  color: var(--text-light);
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.profile-meta {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.meta-item .star {
+  color: var(--tan);
+}
+
+.profile-bio {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.profile-text .btn {
+  display: inline-flex;
+}
+
+/* Tabs */
+.profile-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 40px 0;
+  border-bottom: 2px solid var(--border-gray);
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: var(--dark-blue);
+}
+
+.tab-btn.active {
+  color: var(--dark-blue);
+  border-bottom-color: var(--dark-blue);
+}
+
+.tab-content {
+  padding: 40px 0;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.profile-section {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(26, 58, 82, 0.08);
+}
+
+.profile-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--dark-blue);
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-item {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-item strong {
+  display: block;
+  color: var(--dark-blue);
+  margin-bottom: 8px;
+}
+
+.specialty-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.portfolio-item {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(26, 58, 82, 0.08);
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(26, 58, 82, 0.15);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-item h4 {
+  padding: 12px;
+  margin: 0;
+}
+
+.portfolio-item p {
+  padding: 0 12px 12px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.no-content {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .profile-info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-meta {
+    justify-content: center;
+  }
+}

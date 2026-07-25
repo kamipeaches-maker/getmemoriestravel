@@ -1,0 +1,179 @@
+.submit-trip-page {
+  min-height: calc(100vh - 200px);
+  padding: 60px 0;
+  background-color: var(--off-white);
+}
+
+.submit-trip-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.submit-trip-header h1 {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 16px;
+}
+
+.submit-trip-header p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.submit-trip-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 16px rgba(26, 58, 82, 0.1);
+}
+
+.submit-trip-form {
+  width: 100%;
+}
+
+.form-section {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid var(--border-gray);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border-gray);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.package-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.package-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid var(--border-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.package-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.package-option:hover {
+  border-color: var(--light-blue);
+  background-color: rgba(135, 206, 235, 0.05);
+}
+
+.package-option input[type="radio"]:checked + .package-label {
+  color: var(--dark-blue);
+}
+
+.package-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.package-label strong {
+  font-weight: 700;
+}
+
+.package-label small {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.services-checkboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.btn-large {
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .submit-trip-form-container {
+    padding: 24px;
+  }
+
+  .form-row,
+  .package-selector,
+  .services-checkboxes {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-trip-header h1 {
+    font-size: 1.8rem;
+  }
+}
