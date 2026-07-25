@@ -4,11 +4,25 @@
   "description": "Travel website with submission form, customized travel plans, and videography/photography services",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "18.x || 20.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamipeaches-maker/getmemoriestravel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kamipeaches-maker/getmemoriestravel/issues"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
     "build": "echo 'Build script'",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "audit": "npm audit"
   },
   "keywords": ["travel", "photography", "videography"],
   "author": "kamipeaches-maker",
@@ -20,7 +34,7 @@
     "mongoose": "^8.0.0",
     "joi": "^17.11.0",
     "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^9.0.2",
+    "jsonwebtoken": "^9.1.2",
     "socket.io": "^4.7.0",
     "stripe": "^14.0.0",
     "multer": "^1.4.5-lts.1"
@@ -28,11 +42,8 @@
   "devDependencies": {
     "nodemon": "^3.0.1",
     "jest": "^29.7.0",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.0"
   }
-}
-try {
-  // your logic
-} catch (err) {
-  return Response.json({ error: err.message }, { status: 500 });
 }
