@@ -31,3 +31,8 @@
     "supertest": "^6.3.3"
   }
 }
+try {
+  // your logic
+} catch (err) {
+  return Response.json({ error: err.message }, { status: 500 });
+}
